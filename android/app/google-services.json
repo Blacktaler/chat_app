@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "205031869798",
+    "project_id": "fir-chatapp-c6f6e",
+    "storage_bucket": "fir-chatapp-c6f6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205031869798:android:ee52657a7d31f598884ca7",
+        "android_client_info": {
+          "package_name": "com.example.clean_architecture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205031869798-h2gl2s10rjju4qlpljdu86e2h65ada31.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzPlNQ-zHB_KHBafcKqW6l8LVCCXrBAZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205031869798-h2gl2s10rjju4qlpljdu86e2h65ada31.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "205031869798-bq5s6t6tdi36c5pr56vc3o3egc6aqk3m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cleanArchitecture"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
