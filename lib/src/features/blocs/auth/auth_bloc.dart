@@ -11,6 +11,7 @@ part 'auth_state.dart';
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc() : super(AuthInitial()) {
     on<GoogleSignInn>((event, emit) async {
+      
       GoogleSignIn googleSignIn = GoogleSignIn();
       GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
       GoogleSignInAuthentication googleSignInAuthentication =
