@@ -5,9 +5,8 @@ import 'package:clean_architecture/src/domain/repository/get_data_repository.dar
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class ChatRepositoryImpl extends GetDataRepository {
-  
-  
+/// Api Manager class
+class ChatRepository extends GetDataRepository {
   
   @override
   Future<List<GetDataEntity>> getMessages(String params) async {
@@ -20,6 +19,7 @@ class ChatRepositoryImpl extends GetDataRepository {
 
     // List<GetDataEntity> datas =
     //     messagesList.map((e) => GetDataEntity(id: e.id, text: e.text)).toList();
+    
     List<GetDataEntity> datas = [];
 
     List<GetDataEntity> list = [];
@@ -30,4 +30,5 @@ class ChatRepositoryImpl extends GetDataRepository {
 
     return datas;
   }
+  
 }

@@ -6,7 +6,7 @@ abstract class MessagingState {}
 class MessagingInitial extends MessagingState {}
 
 class LoadMessages extends MessagingState{
-  List<ChatDto>? messages;
+  List<GetDataEntity>? messages;
   bool? isLoading;
   LoadMessages({this.messages,this.isLoading});
 }

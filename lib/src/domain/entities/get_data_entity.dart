@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 
+///Tekinxo'r model
+
 class GetDataEntity extends Equatable{
   String text;
   String id;
