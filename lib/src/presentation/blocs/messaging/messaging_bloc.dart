@@ -12,8 +12,11 @@ part 'messaging_state.dart';
 class MessagingBloc extends Bloc<MessagingEvent, MessagingState> {
   MessagingBloc() : super(MessagingInitial()) {
     on<InitialMessages>((event, emit) async {
+
       final messages = await GetMessagesCase(chatRepo: ChatRepository()).call('');
+      
       await Future.delayed(Duration(milliseconds: 500));
+      
       emit(LoadMessages(messages: messages, isLoading: false));
     });
 

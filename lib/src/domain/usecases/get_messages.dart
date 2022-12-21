@@ -12,7 +12,7 @@ class GetMessagesCase extends UseCase{
   Future<List<GetDataEntity>> call(dynamic params) async{
 
     final result = await chatRepo.getMessages(params);
-    
+
     return result;
 }
 

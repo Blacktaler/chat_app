@@ -7,28 +7,11 @@ import 'package:flutter/material.dart';
 
 /// Api Manager class
 class ChatRepository extends GetDataRepository {
-  
   @override
   Future<List<GetDataEntity>> getMessages(String params) async {
-    final fireStore = FirebaseFirestore.instance;
-    final messages = await fireStore.collection('messages').get();
-
-    List<ChatDto> messagesList = messages.docs.map((element) {
-      return ChatDto.fromMap(element.data());
-    }).toList();
-
-    // List<GetDataEntity> datas =
-    //     messagesList.map((e) => GetDataEntity(id: e.id, text: e.text)).toList();
-    
-    List<GetDataEntity> datas = [];
-
-    List<GetDataEntity> list = [];
-    for (ChatDto element in messagesList) {
-      list.add(GetDataEntity(id: element.id, text: element.text));
-    }
-    datas = list;
-
+    final chats = await FireMessages.getChats();
+    final List<GetDataEntity> datas =
+        chats.map((e) => GetDataEntity(id: e.id, text: e.text)).toList();
     return datas;
   }
-  
 }

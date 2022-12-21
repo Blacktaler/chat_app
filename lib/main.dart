@@ -3,6 +3,7 @@ import 'package:clean_architecture/src/core/themes/app_themes.dart';
 import 'package:clean_architecture/src/presentation/blocs/auth/auth_bloc.dart';
 import 'package:clean_architecture/src/presentation/blocs/messaging/messaging_bloc.dart';
 import 'package:clean_architecture/src/presentation/views/auth_page.dart';
+import 'package:clean_architecture/src/presentation/views/chat_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,10 +29,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AppRoutes.onGenerateRoute(RouteSettings());
-    AppRoutes.gg();
+   
     return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/home':(context) => ChatPage(id: '1'),
+      },
       onGenerateRoute: AppRoutes.onGenerateRoute,
-      home: AuthPage(),
     );
   }
 }

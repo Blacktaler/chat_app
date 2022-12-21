@@ -5,6 +5,7 @@ class FireMessages{
  static Future<List<ChatDto>>  getChats()async{
     final fireStore = FirebaseFirestore.instance;
     final messages = await fireStore.collection('messages').get();
+    
     List<ChatDto> messagesList =  messages.docs.map((element) {
       return ChatDto.fromMap(element.data());
      }).toList();
