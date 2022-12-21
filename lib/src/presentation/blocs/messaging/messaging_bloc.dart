@@ -25,7 +25,7 @@ class MessagingBloc extends Bloc<MessagingEvent, MessagingState> {
     on<SendMessage>((event, emit) async {
       emit(LoadMessages(isLoading: true));
 
-      await FireMessages.senMessage(event.id, event.text);
+      await FireMessages.senMessage(event.id, event.text,event.index);
 
       final messages = await FireMessages.getChats();
       

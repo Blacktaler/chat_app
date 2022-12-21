@@ -6,7 +6,8 @@ abstract class MessagingEvent {}
 class SendMessage extends MessagingEvent{
   String id;
   String text;
-  SendMessage(this.id,this.text);
+  int index;
+  SendMessage(this.id,this.text,this.index);
 }
 
 class GetMessages extends MessagingEvent{}

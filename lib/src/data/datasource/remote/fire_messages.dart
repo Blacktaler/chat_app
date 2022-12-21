@@ -11,9 +11,9 @@ class FireMessages{
      return messagesList;
   }
 
-  static Future senMessage(String id,String text)async{
+  static Future senMessage(String id,String text,int index)async{
     final fireStore = FirebaseFirestore.instance;
     Map<String,dynamic> map = {'id':id,'text':text};
-    await fireStore.collection('messages').add(map);
+    await fireStore.collection('messages').doc();
   }
 }

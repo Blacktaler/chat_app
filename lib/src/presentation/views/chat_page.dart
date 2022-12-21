@@ -1,5 +1,5 @@
 import 'package:clean_architecture/src/data/datasource/remote/fire_messages.dart';
-import 'package:clean_architecture/src/features/blocs/messaging/messaging_bloc.dart';
+import 'package:clean_architecture/src/presentation/blocs/messaging/messaging_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -34,7 +34,7 @@ class ChatPage extends StatelessWidget {
                           : () {
                               context
                                   .read<MessagingBloc>()
-                                  .add(SendMessage(id, textController.text));
+                                  .add(SendMessage(id, textController.text,state.messages!.length+1));
                             },
                       icon: state.isLoading!
                           ? Center(
